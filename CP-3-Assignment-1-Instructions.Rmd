@@ -6,21 +6,58 @@ output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
 ```
 
 # Factorial, Fibonacci, and Foobar examples
 
 # Exercise 1
 
-Re-create the factorial function, `factorial()` without calling the factorial function. Think about what inputs are appropriate for your function, and have your function return the " Error " string if provided an invalid input.
+Re-create the factorial function, `factorial()` without calling the factorial function. Think about what inputs are appropriate for your function, and have your function return an `"Error"` string if provided an invalid input. Call your function `myFactorial`.
+
+```{r}
+# Examples #
+
+> myFactorial(5)
+[1] 120
+
+> myFactorial(-2)
+[1] "Error"
+```
+
+
 
 
 # Exercise 2
 
-Write a function that returns a vector of the first n elements of the fibonacci sequence, starting with 0,1,...
+Write a function that returns a vector of the first n elements of the Fibonacci sequence, starting with 0,1,...
+Call your function `myFib`
+
+```{r}
+# Examples #
+
+> myFib(12)
+[1]  0  1  1  2  3  5  8 13 21 34 55 89
+
+> myFib(-2)
+NULL
+
+```
 
 
 # Exercise 3
 
-Write a function called `fooBarFun` that takes a number for an input, if the number is divisible by 3 the function should return the string "Foo", if the number is divisible by 5 the function should return the string "Bar".  Finally if the number is divisble by both 3 and 5 the function should return the string "FooBar".  Return an empty string if the number is not divisble by 3 or 5.  Use `%%` to check for divisibility and `paste0` to construct your string returns.
+Write a function called `fooBarFun` that takes a number for an input, if the number is divisible by 3 the function should return the string "Foo", if the number is divisible by 5 the function should return the string "Bar".  Finally if the number is divisible by both 3 and 5 the function should return the string "FooBar".  Return an empty string if the number is not divisible by 3 or 5.  Use `%%` to check for divisibility and `paste0` to construct your string returns.
+
+```{r}
+# Examples #
+
+> fooBarFun(3)
+[1] "Foo"
+
+> fooBarFun(5)
+[1] "Bar"
+
+> fooBarFun(15)
+[1] "FooBar"
+```
